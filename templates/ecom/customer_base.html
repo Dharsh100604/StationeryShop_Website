@@ -12,21 +12,23 @@
 
 <style>
 body {
-    background-color: #f7f7f7;
+    background-color: #f1ebeb;
 }
 
 #navbar {
-    background-color: #3e454c;
-    color: black;
+    /* background-color: #3e454c;
+    color: black; */
+    background: rgb(52,172,224);
+background: linear-gradient(0deg, rgba(52,172,224,1) 0%, rgba(253,187,45,1) 100%);
 }
 
 .row1 {
     padding-top: 10px;
-    padding-right: 50px
+    padding-right: 50px;
 }
 
 .row2 {
-    padding-bottom: 20px
+    padding-bottom: 20px;
 }
 
 .navbar-input {
@@ -38,8 +40,8 @@ body {
 }
 
 .navbar-button {
-    background-color: #e5bc41;
-    border: 1px solid #e5bc41;
+  background-color: #E5BC41;
+    border: 1px solid #E5BC41;
     border-radius: 0 2px 2px 0;
     color: #565656;
     padding: 10px 0;
@@ -100,7 +102,7 @@ body {
     color: inherit;
     border: none;
     outline: none;
-    font-size: 12px
+    font-size: 15px;
 }
 
 .dropdown {
@@ -152,7 +154,7 @@ body {
     box-sizing: border-box;
     display: block;
     padding: 0 11px;
-    line-height: 23px
+    line-height: 23px;
 }
 
 .profile-li {
@@ -160,7 +162,7 @@ body {
 }
 
 .largenav {
-    display: none
+    display: none;
 }
 
 .smallnav {
@@ -176,61 +178,6 @@ body {
     cursor: pointer
 }
 
-        /*---------------------------------------
-           Social section
-        -----------------------------------------*/
-        footer {
-          padding: 0px 0px 0px 0px;
-          background-color: black;
-          margin: 0px;
-        }
-
-
-        #ftr {
-
-          padding: 20px;
-        }
-
-        .fa {
-
-          font-size: 23px;
-          width: 60px;
-          text-align: center;
-          text-decoration: none;
-          margin: 5px 2px;
-          border-radius: 50%;
-        }
-
-        .fa:hover {
-          opacity: 0.5;
-          text-decoration: none;
-        }
-
-        .fa-facebook {
-          background: #3B5998;
-          color: white;
-          margin-top: 30px;
-        }
-
-        .fa-whatsapp {
-          background: #25d366;
-          color: white;
-        }
-
-        .fa-twitter {
-          background: #55ACEE;
-          color: white;
-        }
-
-        .fa-instagram {
-          background: #125688;
-          color: white;
-        }
-
-        p {
-          text-align: center;
-
-        }
 
 
 @media screen and (min-width: 768px) {
@@ -253,23 +200,18 @@ body {
     <div class="container">
         <div class="row row1">
             <ul class="largenav pull-right">
-                <li class="upper-links"><a class="links" href="/customer-home">Home</a></li>
-                <li class="upper-links"><a class="links" href="/my-order">Track Orders</a></li>
-                <li class="upper-links"><a class="links" href="/my-profile">Profile</a></li>
-                <li class="upper-links dropdown"><a class="links" href="">More</a>
-                  <ul class="dropdown-menu">
-                    <li class="profile-li"><a class="profile-links" href="/send-feedback">Send Feedback</a></li>
-                      <li class="profile-li"><a class="profile-links" href="/contactus">Contact Us</a></li>
-                      <li class="profile-li"><a class="profile-links" href="/aboutus">About Us</a></li>
-                  </ul>
-                </li>
-                <li class="upper-links"><a class="links" href="/logout">Logout</a></li>
+              <li class="upper-links"><a class="links" href="/customer-home">Home</a></li>
+              <li class="upper-links"><a class="links" href="/aboutus">About Us</a></li>
+              <li class="upper-links"><a class="links" href="/my-profile">Profile</a></li>
+              <li class="upper-links"><a class="links" href="/my-order">Track Orders</a></li>
+              <li class="upper-links"><a class="links" href="/send-feedback">Send Feedback</a></li>
+              <li class="upper-links"><a class="links" href="/logout">Logout</a></li>
                 
             </ul>
         </div>
         <div class="row row2">
             <div class="col-sm-3">
-                <h2 style="margin:0px;"><a style="text-decoration:none; color:white;" href="/"><span class="largenav">Cube Traders </span></a></h2>
+              <img src="../../static/images/logo.jpg" alt="Cube Traders Logo" style="height: 50px; border-radius: 20px;">
             </div>
 
             <div class="navbar-search smallsearch col-sm-7 col-xs-11">
@@ -293,11 +235,12 @@ body {
 </div>
 <!-- content start-->
 {% block content %}
-
+{% include "ecom/footer.html" %}
 {% endblock content %}
 <!-- content end-->
 <br><br><br>
-<footer>
+
+<!-- <footer>
   <br>
 
   <p>
@@ -317,7 +260,7 @@ body {
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 <script>
 $(document).ready(function(){
 
