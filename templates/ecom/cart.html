@@ -88,7 +88,11 @@
       <tr>
         <td> {{p.name}}</td>
         <td> <img src="{% static p.product_image.url %}" alt="Profile Pic" height="50px" width="50px" /></td>
+<<<<<<< HEAD
         <td>Rs.{{p.price}}</td>
+=======
+        <td>$ {{p.price}}</td>
+>>>>>>> origin/master
         <td>{{p.description}}</td>
 
         <td><a class="btn btn-danger btn-xs" href="{% url 'remove-from-cart' p.id  %}"><span class="glyphicon glyphicon-trash"></span></a></td>
@@ -104,7 +108,11 @@
 </div>
 <br><br><br>
 <div style="text-align: center;">
+<<<<<<< HEAD
   <button class="btn btn-danger btn-lg">Total Rs.{{total}}</button>
+=======
+  <button class="btn btn-danger btn-lg">Total ${{total}}</button>
+>>>>>>> origin/master
   <a href="/customer-address"><button class="btn btn-success btn-lg" ><span>Purchase </span></button></a>
 </div>
 
